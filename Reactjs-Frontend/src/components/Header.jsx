@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { LoginOrSignup, Logout } from "../components";
+import { LoginOrSignup_Header, Logout_Header } from "../components";
 
 // Remove after development
 import { FaToggleOn } from "react-icons/fa";
@@ -28,7 +28,11 @@ export default function Header() {
       <div className="flex items-center ps-1">
         <Link to="/contactus">Contact Us</Link>
       </div>
-      {userLogin ? <Logout setUserLogin={setUserLogin} /> : <LoginOrSignup />}
+      {userLogin ? (
+        <Logout_Header setUserLogin={setUserLogin} />
+      ) : (
+        <LoginOrSignup_Header />
+      )}
     </div>
   );
 }

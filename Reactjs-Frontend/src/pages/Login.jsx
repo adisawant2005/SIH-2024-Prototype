@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-export default function Login() {
+export default function Login({}) {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -14,10 +18,30 @@ export default function Login() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+    const apiEndpoint = "http://localhost:3000/login";
+
+    // Create a FormData object
+    const formDataToSend = new FormData();
+
+    Object.entries(formData).forEach(([key, value]) => {
+      formDataToSend.append(key, value);
+    });
+
+    try {
+      // Making a POST request using Axios to upload the file and send form data
+      console.log(formDataToSend);
+      const response = await axios.get(apiEndpoint, {
+        params: formData,
+      });
+      if (response.data) {
+        navigate("/");
+        console.log(response.data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

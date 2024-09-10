@@ -1,7 +1,5 @@
 import TeamDetails from "../data/TeamDetails";
 
-console.log("TeamDetails: ", TeamDetails);
-
 export default function Team() {
   return (
     <div className="min-h-screen bg-gray-100 py-8">
