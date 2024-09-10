@@ -13,7 +13,7 @@ export default function Services() {
           <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
           <div className="space-y-8">
             <div className="bg-gray-50 p-6 rounded-lg shadow">
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-xl font-semibold mb-2 hover:cursor-pointer">
                 Aptitude Assessment
               </h3>
               <p>
@@ -24,7 +24,7 @@ export default function Services() {
               </p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg shadow">
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-xl font-semibold mb-2 hover:cursor-pointer">
                 Career Fit Analysis
               </h3>
               <p>
@@ -35,7 +35,7 @@ export default function Services() {
               </p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg shadow">
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-xl font-semibold mb-2 hover:cursor-pointer">
                 Skills and Experience Alignment
               </h3>
               <p>
@@ -46,7 +46,7 @@ export default function Services() {
               </p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg shadow">
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-xl font-semibold mb-2 hover:cursor-pointer">
                 Career Path Forecasting
               </h3>
               <p>
